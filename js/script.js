@@ -1,3 +1,5 @@
+const myLibrary = [];
+
 function Book() {
     this.title = '';
     this.author = '';
@@ -11,4 +13,8 @@ function Book() {
             haveRead = "have read"
         console.log(`${this.title} by ${this.author}, ${this.pages} ${haveRead}`)
     };
+}
+
+function addBookToLibrary() {
+    
 }
