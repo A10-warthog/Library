@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!--container to hold whole application-->
     <div class="container">
+    <!--card design to make new cards-->
         <div class="card_obj display--none" data-id="0">
             <div class="change">
                 <button class="button"data-name="status">
@@ -40,73 +42,74 @@
             </div>
         </div>
         <div class="bookshelf">
-        <!---button to add a book-->
+    <!---button to add a book-->
             <div class="addbook_btn">
                 <button class=" button add_btn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg_icon"><title>plus</title><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>
                 </button>
             </div>
         </div>
-        <!--Visible when books are not present-->
-        <div class="no_book_txt">
-            <p>Add a book  
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg_icon svg_icon--large"><title>bookshelf</title><path d="M9 3V18H12V3H9M12 5L16 18L19 17L15 4L12 5M5 5V18H8V5H5M3 19V21H21V19H3Z" /></svg>
-            </p>
-        </div>
-        <!--form to add a new book to shelf-->
-        <div class="addbook">
-            <div class="addbook_box">
-                <div class="close">
-        <!--button to close form-->
-                    <button class="button close__btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg_icon"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
-                    </button>
-                </div>
-        <!--Ask user to input book detail-->
-                <form class="addbook_box__form" action="#" method="post">
-                    <div class="input_field">
-                        <div class="field">
-                            <label for="title">Title</label>
-                            <input type="text" data-id="title" id="title" name="title" value="" required />
-                        </div>
-                        <div class="field">
-                            <label for="author_name">Author</label>
-                            <input type="text" data-id="name" id="author_name" name="author" value="" required>
-                        </div>
-                        <div class="field">
-                            <label for="pages">Page</label>
-                            <input type="number" data-id="page" id="pages" name="pages" value="" required>
-                        </div>
-                        <div class="field">
-                            <label for="genre">Genre</label>
-                            <select id="genre" name="genre" data-id="genre" required>
-                                <option disabled selected value>Choose one</option>
-                                <option value="Non-Fiction">Non-Fiction</option>
-                                <option value="Fantasy">Fantasy</option>
-                                <option value="Sci-Fi">Sci-Fi</option>
-                                <option value="Mystery">Mystery</option>
-                                <option value="Thriller">Thriller</option>
-                                <option value="Western">Western</option>
-                            </select>
-                        </div>
-                        <div class="field">
-                            <label for="status">Status</label>
-                            <div class="field_read" >
-                                <input type="checkbox" data-id="status" id="status" name="status" value="unread">
-                                <span>read</span>
-                            </div>
-                        </div>
-                        <div class="button_field">
-                            <button type="submit" class="button add">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg_icon"><title>book-plus</title><path d="M13 19C13 20.1 13.3 21.12 13.81 22H6C4.89 22 4 21.11 4 20V4C4 2.9 4.89 2 6 2H7V9L9.5 7.5L12 9V2H18C19.1 2 20 2.89 20 4V13.09C19.67 13.04 19.34 13 19 13C15.69 13 13 15.69 13 19M20 18V15H18V18H15V20H18V23H20V20H23V18H20Z" /></svg>
-                            </button>
-                            <button type="reset" class="button reset">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg_icon"><title>refresh</title><path d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z" /></svg>
-                            </button>
+    </div>
+    <!--Visible when books are not present-->
+    <div class="no_book_txt">
+        <p>Add a book  
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg_icon svg_icon--large"><title>bookshelf</title><path d="M9 3V18H12V3H9M12 5L16 18L19 17L15 4L12 5M5 5V18H8V5H5M3 19V21H21V19H3Z" /></svg>
+        </p>
+    </div>
+    <!--form to add a new book to shelf-->
+     <div class="addbook">
+        <div class="addbook_box">
+            <div class="close">
+    <!--button to close form-->
+                <button class="button close__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg_icon"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+                </button>
+            </div>
+    <!--Ask user to input book detail-->
+            <form class="addbook_box__form" action="#" method="post">
+                <div class="input_field">
+                    <div class="field">
+                        <label for="title">Title</label>
+                        <input type="text" data-id="title" id="title" name="title" value="" required />
+                    </div>
+                    <div class="field">
+                        <label for="author_name">Author</label>
+                        <input type="text" data-id="name" id="author_name" name="author" value="" required>
+                    </div>
+                    <div class="field">
+                        <label for="pages">Page</label>
+                        <input type="number" data-id="page" id="pages" name="pages" value="" required>
+                    </div>
+                    <div class="field">
+                        <label for="genre">Genre</label>
+                        <select id="genre" name="genre" data-id="genre" required>
+                            <option disabled selected value>Choose one</option>
+                            <option value="Non-Fiction">Non-Fiction</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Sci-Fi">Sci-Fi</option>
+                            <option value="Mystery">Mystery</option>
+                            <option value="Thriller">Thriller</option>
+                            <option value="Western">Western</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="status">Status</label>
+                        <div class="field_read" >
+                            <input type="checkbox" data-id="status" id="status" name="status" value="unread">
+                            <span>read</span>
                         </div>
                     </div>
-                </form>
-            </div>
+    <!--Buttons to submit and reset form-->
+                    <div class="button_field">
+                        <button type="submit" class="button add">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg_icon"><title>book-plus</title><path d="M13 19C13 20.1 13.3 21.12 13.81 22H6C4.89 22 4 21.11 4 20V4C4 2.9 4.89 2 6 2H7V9L9.5 7.5L12 9V2H18C19.1 2 20 2.89 20 4V13.09C19.67 13.04 19.34 13 19 13C15.69 13 13 15.69 13 19M20 18V15H18V18H15V20H18V23H20V20H23V18H20Z" /></svg>
+                        </button>
+                        <button type="reset" class="button reset">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg_icon"><title>refresh</title><path d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z" /></svg>
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </body>
