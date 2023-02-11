@@ -8,39 +8,40 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!--container to hold whole application-->
+    <!--container to display books and give background color-->
     <div class="container">
-    <!--card design to make new cards-->
+    <!--card object to make new cards-->
         <div class="card_obj display--none" data-id="0">
             <div class="change">
-                <button class="button"data-name="status">
+                <button class="button" data-name="status">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg_icon--small"><title>read</title><path d="M21.59,11.59L23,13L13.5,22.5L8.42,17.41L9.83,16L13.5,19.68L21.59,11.59M4,16V3H6L9,3A4,4 0 0,1 13,7C13,8.54 12.13,9.88 10.85,10.55L14,16H12L9.11,11H6V16H4M6,9H9A2,2 0 0,0 11,7A2,2 0 0,0 9,5H6V9Z" /></svg>
                 </button>
-                <button class="button btn_del " data-name="delete">
+                <button class="button btn_del" data-name="delete">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete-outline</title><path d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" /></svg>
                 </button>
             </div>
-            <div class="card_title">
+            <div class="card_entry card_title">
                 <span>Title:</span>
-                <p class="title" data-id="title-need"></p>
+                <p class="info title" data-name="title-need"></p>
             </div>
-            <div class="card_author">
+            <div class="card_entry card_author">
                 <span>Author:</span>
-                <p class="author" data-id="author-need"></p>
+                <p class="info author" data-name="author-need"></p>
             </div>
-            <div class="card_genre">
+            <div class="card_entry card_genre">
                 <span>Genre:</span>
-                <p class="genre" data-id="genre-need"></p>
+                <p class="info genre" data-name="genre-need"></p>
             </div>
-            <div class="card_page">
+            <div class="card_entry card_page">
                 <span>Pages:</span>
-                <p class="pages" data-id="page-need"></p>
+                <p class="info pages" data-name="page-need"></p>
             </div>
-            <div class="card_read">
+            <div class="card_entry card_read">
                 <span>Status:</span>
-                <p class="read" data-id="status-need"></p>
+                <p class="info read" data-name="status-need"></p>
             </div>
         </div>
+    <!--Books are added to the bookshelf before button-->
         <div class="bookshelf">
     <!---button to add a book-->
             <div class="addbook_btn">
@@ -68,20 +69,16 @@
     <!--Ask user to input book detail-->
             <form class="addbook_box__form" action="#" method="post">
                 <div class="input_field">
-                    <div class="field">
-                        <label for="title">Title</label>
+                    <label for="title"> 
                         <input type="text" data-id="title" id="title" name="title" value="" required />
-                    </div>
-                    <div class="field">
-                        <label for="author_name">Author</label>
+                    </label>
+                    <label for="author_name">
                         <input type="text" data-id="name" id="author_name" name="author" value="" required>
-                    </div>
-                    <div class="field">
-                        <label for="pages">Page</label>
+                    </label>
+                    <label for="pages">
                         <input type="number" data-id="page" id="pages" name="pages" value="" required>
-                    </div>
-                    <div class="field">
-                        <label for="genre">Genre</label>
+                    </label>
+                    <label for="genre">
                         <select id="genre" name="genre" data-id="genre" required>
                             <option disabled selected value>Choose one</option>
                             <option value="Non-Fiction">Non-Fiction</option>
@@ -91,14 +88,13 @@
                             <option value="Thriller">Thriller</option>
                             <option value="Western">Western</option>
                         </select>
-                    </div>
-                    <div class="field">
-                        <label for="status">Status</label>
+                    </label>
+                    <label for="status">
                         <div class="field_read" >
                             <input type="checkbox" data-id="status" id="status" name="status" value="unread">
                             <span>read</span>
                         </div>
-                    </div>
+                    </label>
     <!--Buttons to submit and reset form-->
                     <div class="button_field">
                         <button type="submit" class="button add">
