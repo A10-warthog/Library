@@ -69,31 +69,25 @@
     <!--Ask user to input book detail-->
             <form class="addbook_box__form" action="#" method="post">
                 <div class="input_field">
-                    <label for="title"> 
-                        <input type="text" data-id="title" id="title" name="title" value="" required />
-                    </label>
-                    <label for="author_name">
-                        <input type="text" data-id="name" id="author_name" name="author" value="" required>
-                    </label>
-                    <label for="pages">
-                        <input type="number" data-id="page" id="pages" name="pages" value="" required>
-                    </label>
-                    <label for="genre">
-                        <select id="genre" name="genre" data-id="genre" required>
-                            <option disabled selected value>Choose one</option>
-                            <option value="Non-Fiction">Non-Fiction</option>
-                            <option value="Fantasy">Fantasy</option>
-                            <option value="Sci-Fi">Sci-Fi</option>
-                            <option value="Mystery">Mystery</option>
-                            <option value="Thriller">Thriller</option>
-                            <option value="Western">Western</option>
-                        </select>
-                    </label>
+                    <label for="title">Book Title:</label>
+                    <input type="text" data-id="title" id="title" name="title" value="" required />
+                    <label for="author_name">Author's Name:</label>
+                    <input type="text" data-id="name" id="author_name" name="author" value="" required>
+                    <label for="pages">Number of Pages:</label>
+                    <input type="number" data-id="page" id="pages" name="pages" value="" required>
+                    <label for="genre">Genre:</label>
+                    <select id="genre" name="genre" data-id="genre" required>
+                        <option disabled selected value>Choose one</option>
+                        <option value="Non-fiction">Non-Fiction</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Western">Western</option>
+                    </select>
                     <label for="status">
-                        <div class="field_read" >
-                            <input type="checkbox" data-id="status" id="status" name="status" value="unread">
-                            <span>read</span>
-                        </div>
+                        Read:
+                        <input class="checkbox" type="checkbox" data-id="status" id="status" name="status" value="unread">
                     </label>
     <!--Buttons to submit and reset form-->
                     <div class="button_field">
