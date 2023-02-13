@@ -2,3 +2,68 @@ p,body,button,span,svg,h1 {
     margin: 0;
     padding: 0;
 }
+
+.svg_icon {
+    width: clamp(1rem, 10%, 100%);
+}
+/*book container*/
+.container {
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+.bookshelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+}
+
+.display--none {
+    display: none;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+}
+
+.book--appearance {
+    min-height: 14rem;
+    outline: 2px solid #111;
+    padding: 0.5rem 1rem;
+}
+
+.btn_change {
+    flex-direction: unset;
+    justify-content: flex-end;
+    column-gap: 0.5rem;
+}
+
+.book__box_txt {
+   flex: 1 1 100%;
+}
+
+.box_txt > :first-child {
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.box_txt > :last-child {
+    padding-left: 1rem;
+    font-size: 0.87rem;
+    word-break: break-word;
+}
+
+/*no_books_txt*/
+.fixed_box {
+    height: 100vh;
+    max-width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*form__box*/
+.book_form {
+    width: clamp(20rem, 22rem, 100%);
+}
