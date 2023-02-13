@@ -20,25 +20,27 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>delete-outline</title><path d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" /></svg>
                 </button>
             </div>
-            <div class="card_entry card_title">
-                <span>Title:</span>
-                <p class="info title" data-name="title-need"></p>
-            </div>
-            <div class="card_entry card_author">
-                <span>Author:</span>
-                <p class="info author" data-name="author-need"></p>
-            </div>
-            <div class="card_entry card_genre">
-                <span>Genre:</span>
-                <p class="info genre" data-name="genre-need"></p>
-            </div>
-            <div class="card_entry card_page">
-                <span>Pages:</span>
-                <p class="info pages" data-name="page-need"></p>
-            </div>
-            <div class="card_entry card_read">
-                <span>Status:</span>
-                <p class="info read" data-name="status-need"></p>
+            <div class="book_data">
+                <div class='book_field'>
+                    <span>Title:</span>
+                    <p class="title" data-id="title-need"></p>
+                </div>
+                <div class='book_field'>
+                    <span>Author:</span>
+                    <p class="author" data-id="author-need"></p>
+                </div>
+                <div class='book_field'>
+                    <span>Genre:</span>
+                    <p class="genre" data-id="genre-need"></p>
+                </div>
+                <div class='book_field'>
+                    <span>Pages:</span>
+                    <p class="pages" data-id="page-need"></p>
+                </div>
+                <div class='book_field'>
+                    <span>Status:</span>
+                    <p class="read status-read" data-id="status-need"></p>
+                </div>
             </div>
         </div>
     <!--Books are added to the bookshelf before button-->
@@ -53,7 +55,7 @@
     </div>
     <!--Visible when books are not present-->
     <div class="no_book_txt">
-        <p>Add a book  
+        <p>Add a book 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg_icon svg_icon--large"><title>bookshelf</title><path d="M9 3V18H12V3H9M12 5L16 18L19 17L15 4L12 5M5 5V18H8V5H5M3 19V21H21V19H3Z" /></svg>
         </p>
     </div>
@@ -85,10 +87,10 @@
                         <option value="Thriller">Thriller</option>
                         <option value="Western">Western</option>
                     </select>
-                    <label for="status">
-                        Read:
-                        <input class="checkbox" type="checkbox" data-id="status" id="status" name="status" value="unread">
-                    </label>
+                    <div class="checkbox">
+                        <label for="status">Read:</label>
+                        <input type="checkbox" data-id="status" id="status" name="status" value="unread">
+                    </div>
     <!--Buttons to submit and reset form-->
                     <div class="button_field">
                         <button type="submit" class="button add">
