@@ -1,39 +1,60 @@
 p,body,button,span,svg,h1 {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 0.5rem;
+}
+
+.btn {
+    background-color: transparent;
+    outline: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .svg_icon {
-    width: clamp(1rem, 10%, 100%);
+    width: 1.5rem;
 }
+
 /*book container*/
 .container {
     min-height: 100vh;
     max-width: 100vw;
+    background-color: aliceblue;
 }
 
 .bookshelf {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+    padding: 1rem;
 }
 
-.display--none {
-    display: none;
-}
-
-.book {
+.book, .box_txt, .user_input {
     display: flex;
     flex-direction: column;
 }
 
-.book--appearance {
+.book__look {
     min-height: 14rem;
     outline: 2px solid #111;
     padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.book_btn__add {
+    align-items: center;
+    justify-content: center;
 }
 
 .btn_change {
-    flex-direction: unset;
+    flex-direction: row;
     justify-content: flex-end;
     column-gap: 0.5rem;
 }
@@ -56,14 +77,91 @@ p,body,button,span,svg,h1 {
 /*no_books_txt*/
 .fixed_box {
     height: 100vh;
-    max-width: 100vw;
-    position: fixed;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+}
+
+.no_books_txt > :first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 2rem;
+}
+
+.svg_icon--large {
+    width: 3rem;
+}
+
+.book_box__add {
+    z-index: 3;
 }
 
 /*form__box*/
 .book_form {
     width: clamp(20rem, 22rem, 100%);
+    gap: 0.6rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
 }
+
+.form {
+    gap: 0.6rem;
+}
+.user_input {
+    gap: 0.2rem;
+    font-size: 1.15rem;
+}
+
+.user_input > :last-child {
+    padding: 0.4rem;
+    font-size: 0.98rem;
+}
+
+.checkbox, .btn__bottom {
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.form__btn {
+    align-self: flex-end;
+}
+
+.btn__bottom {
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.display--none {
+    display: none;
+}
+
+/***modifier***/
+.blur {
+    filter: blur(2px);
+}
+
+.empty_field {
+    border: 2px solid red;
+    border-radius: 0.4rem;
+}
+
+.error--txt {
+    color: red;
+}
+
+.pass_field {
+    border: 2px solid green;
+    border-radius: 0.4rem;
+}
+
+.pass--txt {
+    color: green;
+}
+
