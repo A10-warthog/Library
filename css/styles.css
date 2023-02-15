@@ -158,11 +158,11 @@ h1 {
   gap: 1rem;
 }
 
+/***modifier***/
 .display--none {
   display: none;
 }
 
-/***modifier***/
 .blur {
   filter: blur(2px);
 }
@@ -176,11 +176,10 @@ h1 {
   color: red;
 }
 
-.pass_field {
-  border: 2px solid green;
-  border-radius: 0.4rem;
+.read {
+  outline: 2px solid green;
 }
 
-.pass--txt {
+.read_txt {
   color: green;
 }

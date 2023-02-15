@@ -3,9 +3,11 @@ const container = document.querySelector(".container");
 const bookshelf = document.querySelector(".bookshelf");
 const addBtn = document.querySelector(".btn_add");
 const form = document.querySelector(".book_form");
+const inputValue = document.querySelector(".form");
 const bookPrint = document.querySelector("[data-id='0']");
 const select = document.querySelector("[data-name='genre']");
 const formBody = document.querySelector(".book_box__add");
+const noBook = document.querySelector(".no_books_txt");
 const [...inputField] = document
   .querySelector(".form")
   .querySelectorAll("input");
@@ -18,6 +20,16 @@ function Book(title, author, pages, genre, state) {
   this.pages = pages;
   this.genre = genre;
   this.state = state;
+}
+
+// remove no book text from display
+function noBooks() {
+  if (myLibrary.length === 0) {
+    noBook.classList.remove("display--none");
+    console.log(true, "books are not present");
+  } else {
+    noBook.classList.add("display--none");
+  }
 }
 
 // finds button recursively
@@ -66,20 +78,30 @@ function addBookToDom(book) {
         myLibrary = myLibrary.filter(
           (elm) => elm.id !== +thisBook.getAttribute("data-id")
         );
+        noBooks();
         thisBook.remove();
       }
       if (dataName === "btn_status") {
+        const status = thisBook.querySelector("[data-put='status']");
         const foundBook = myLibrary.find(
           (elm) => elm.id === +thisBook.getAttribute("data-id")
         );
-        if (foundBook.state === "unread") foundBook.state = "read";
-        else foundBook.state = "unread";
+        if (foundBook.state === "unread") {
+          foundBook.state = "read";
+          status.classList.add("read_txt");
+          thisBook.classList.add("read");
+          console.log(status, "thisBook__________");
+        } else {
+          foundBook.state = "unread";
+          status.classList.remove("read_txt");
+          thisBook.classList.remove("read");
+        }
         myLibrary[foundBook.id - 1].state = foundBook.state;
-        thisBook.querySelector("[data-put='status']").textContent =
-          foundBook.state;
+        status.textContent = foundBook.state;
       }
     })
   );
+  noBooks();
   thisBook.classList.remove("display--none");
   return thisBook;
 }
@@ -115,6 +137,7 @@ function addBook(event) {
     bookshelf.insertBefore(toDomBook, addBtn.parentElement);
     document.querySelector(".book_box__add").classList.add("display--none");
     bookshelf.parentElement.classList.remove("blur");
+    inputValue.reset();
   }
 }
 
@@ -131,6 +154,7 @@ form.addEventListener("click", (event) => {
     case "btn_close":
       container.classList.remove("blur");
       formBody.classList.add("display--none");
+      inputValue.reset();
       break;
     case "btn_submit":
       addBook(event);
@@ -149,4 +173,12 @@ inputField.forEach((elm) => {
     if (inputField.every((input) => input.value !== "") === true)
       form.classList.remove("empty_field");
   });
+});
+
+formBody.addEventListener("mousedown", (event) => {
+  if (event.button === 0 && event.target.classList.contains("book_box__add")) {
+    formBody.classList.add("display--none");
+    container.classList.remove("blur");
+    inputValue.reset();
+  }
 });
