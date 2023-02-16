@@ -36,7 +36,7 @@ h1 {
 .bookshelf {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
-  padding: 1rem;
+  padding: 1.5rem;
   gap: 1rem;
 }
 
@@ -50,7 +50,7 @@ h1 {
   min-height: 14rem;
   gap: 0.3rem;
   background-color: #86bdc8;
-  box-shadow: 4px 5px #fafafa9f;
+  box-shadow: -4px 5px #fafafa9f;
   border-radius: 0.2rem;
   padding: 0.5rem 1rem;
   position: relative;
@@ -78,14 +78,12 @@ h1 {
 
 .book__box_txt {
   flex: 1 1 100%;
-  justify-content: center;
   gap: 0.5rem;
 }
 
 .box_txt {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
   column-gap: 0.2rem;
 }
 
@@ -132,18 +130,20 @@ h1 {
 /*form__box*/
 .book_form {
   width: clamp(20rem, 22rem, 100%);
-  gap: 0.6rem;
-  background-color: white;
+  gap: 0.2rem;
+  background-color: antiquewhite;
+  box-shadow: 5px 5px 0px 1px #f0f0f099;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
 }
 
 .form {
-  gap: 0.6rem;
+  gap: 1rem;
 }
+
 .user_input {
-  gap: 0.2rem;
-  font-size: 1.15rem;
+  gap: 0.3rem;
+  font-size: 1.05rem;
 }
 
 .user_input > :last-child {
@@ -177,12 +177,8 @@ h1 {
 }
 
 .empty_field {
-  border: 2px solid red;
-  border-radius: 0.4rem;
-}
-
-.error--txt {
-  color: red;
+  box-shadow: -1px 1px 1px 6px #ff3030;
+  border-radius: 0.2rem;
 }
 
 .read {
