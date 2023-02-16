@@ -88,12 +88,9 @@ function addBookToDom(book) {
         );
         if (foundBook.state === "unread") {
           foundBook.state = "read";
-          status.classList.add("read_txt");
           thisBook.classList.add("read");
-          console.log(status, "thisBook__________");
         } else {
           foundBook.state = "unread";
-          status.classList.remove("read_txt");
           thisBook.classList.remove("read");
         }
         myLibrary[foundBook.id - 1].state = foundBook.state;
